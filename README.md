@@ -6,8 +6,8 @@ This project is a proxy visit script designed to visit a specified URL using pro
 - Supports multiple proxies for anonymous browsing 🕵️‍♂️
 - Validates successful visits with HTML content checks ✅
 - Tracks the number of successful and failed visits 📊
-- Saves proxy data in a `valid_proxies.txt` file 📝
-- Stores URL visit counts in a `database.json` file 🗃️
+- Saves proxy data in a `assets/valid_proxies.txt` file 📝
+- Stores URL visit counts in a `asstes/database.json` file 🗃️
 
 ## How It Works 🔧
 
