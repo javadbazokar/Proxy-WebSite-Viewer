@@ -30,7 +30,7 @@ This project is a proxy visit script designed to visit a specified URL using pro
 
 To run this script locally, follow these steps:
 
-1. **Clone the Repository**:
+1. **Clone the Repository or Download the Repository zip File**:
 
    ```bash
    git clone https://github.com/yourusername/proxy-visit-script.git
