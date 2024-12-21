@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy WebSite Viewer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h1 class="card-title text-center text-primary mb-4">Proxy WebSite Viewer</h1>
+            <p>Upload a text file containing proxies, each proxy (IP:Port) in a new line:</p>
+            <div class="mb-3">
+                <input type="file" id="proxyFile" accept=".txt" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="targetUrl" class="form-label">Website URL: (google.com or https://google.com)</label>
+                <input type="url" id="targetUrl" class="form-control" placeholder="Enter the URL">
+            </div>
+            <div class="mb-3">
+                <label for="visitLimit" class="form-label">Number of Visits:</label>
+                <input type="number" id="visitLimit" class="form-control" min="100" value="100" step="100" oninput="validateVisitLimit()">
+                <small id="visitLimitError" class="text-danger d-none">The number of visits must be a multiple of 100 for accurate calculations.</small>
+            </div>
+            
+            <div class="d-flex flex-column align-items-center gap-3">
+                <div class="d-flex gap-2 w-100">
+                    <button id="startButton" onclick="startVisits()" class="btn btn-primary w-100">Start Visit</button>
+                    <button id="stopButton" onclick="stopVisits()" class="btn btn-danger w-100 d-none">Stop Visit</button>
+                </div>
+                <div id="loadingSpinner" class="d-none">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2 text-bold text-primary">Visits in Progress.....</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5>Successful Visits</h5>
+                    <h3 class="text-success" id="successCount">0</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5>Failed Visits</h5>
+                    <h3 class="text-danger" id="errorCount">0</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5>Total Proxies</h5>
+                    <h3 class="text-warning" id="totalProxies">0</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5>Total Requests</h5>
+                    <h3 class="text-info" id="totalRequests">0</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3>Github <a href="" class=""></a></h3>
+<script src="assets/script.js"></script>
+</body>
+</html>

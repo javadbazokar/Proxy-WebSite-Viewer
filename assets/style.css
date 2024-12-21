@@ -1,0 +1,17 @@
+body {
+    direction: ltr;
+    text-align: left;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}
+
+.d-none {
+    display: none !important;
+}
